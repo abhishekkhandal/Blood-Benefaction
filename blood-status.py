@@ -40,7 +40,7 @@ print """
         </form>
     </div>
     <div>
-        <div class="container">
+        <div class="container" style="display: none;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="table-responsive align-self-center my-auto visible" style="width:300px;padding:10px;">

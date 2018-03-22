@@ -41,33 +41,34 @@ print """
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
-                            <tr></tr>
+                            <tr> <div class="form-group"><input class="form-control" type="text" name="number" required="" placeholder="Donor Contact Number" inputmode="numeric"></div></tr>
                         </thead>
                         <tbody>
                             <tr></tr>
                             <tr>
                                 <td>
-                                    <div class="dropdown"><button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Blood Group</button>
-                                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" value="A">A</a><a class="dropdown-item" role="presentation" value="B">B</a><a class="dropdown-item" role="presentation" href="#">AB</a><a class="dropdown-item" role="presentation"
-                                                href="#">O</a></div>
+                                    <div class="form-group" style="width:100%">
+                                    <select class="form-control">
+                                        <option>A</option>
+                                        <option>B</option>
+                                        <option>AB</option>
+                                        <option>O</option>
+                                    </select>
+                                    
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="dropdown"><button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Rh Factor&nbsp;</button>
-                                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#"></a><a class="dropdown-item" role="presentation" href="#">-ve</a><a class="dropdown-item" role="presentation" href="#">+ve</a></div>
-                                    </div>
+                                    <div class="form-group">
+                                    <select class="form-control">
+                                        <option>POSITIVE</option>
+                                        <option>NEGETIVE</option>
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Unit:</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div class="table-responsive" style="vertical-align: middle;">
+                                        Unit:
                                     </div>
                                 </td>
                                 <td><input type="number" placeholder="unit" class="form-control" min="0.1" step="0.1" value="1" max="1" name="unitNum" style="padding:0px;"/></td>
@@ -80,7 +81,7 @@ print """
                         </tbody>
                     </table>
                 </div>
-                <div class="form-group"><input class="form-control" type="text" name="dname" required="" placeholder="Donor Organisation/hospital name"><input class="form-control" type="text" name="number" required="" placeholder="Contact Number" inputmode="numeric"></div>
+                <div class="form-group"><input class="form-control" type="text" name="dname" required="" placeholder="Donor Organisation/Hospital/NGO"><input class="form-control" type="text" name="number" required="" placeholder="Contact Number" inputmode="numeric"></div>
                 <div
                     class="form-group"><input class="form-control" type="text" name="State" placeholder="State (eg. Rajasthan)"><input class="form-control" type="text" name="city" required="" placeholder="City (eg. Jaipur)"><input class="form-control" type="text" name="zipcode"
                         placeholder="Zipcode (eg. 302004)"></div>
