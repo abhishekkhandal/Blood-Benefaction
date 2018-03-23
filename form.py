@@ -2,19 +2,27 @@
 
 import cgi
 import commands
-bgroup=cgi.FormContent()['bgroup'][0]
-oname=cgi.FormContent()['oname'][0]
-city=cgi.FormContent()['city'][0]
-state=cgi.FormContent()['state'][0]
-date=cgi.FormContent()['date'][0]
-unit=cgi.FormContent()['unit'][0]
+
+donorNumber=cgi.FormContent()['donor-number'][0]
+bloodType=cgi.FormContent()['blood-type'][0]
+RhFactor=cgi.FormContent()['rh-factor'][0]
+unit=cgi.FormContent()['unit-amount'][0]
+dateDonated=cgi.FormContent()['dateDonated'][0]
+
+orgName=cgi.FormContent()['org-name'][0]
+orgNumber=cgi.FormContent()['org-number'][0]
+orgState=cgi.FormContent()['org-state'][0]
+orgCity=cgi.FormContent()['org-city'][0]
 pincode=cgi.FormContent()['pincode'][0]
-data="{0}_{1}_{2}_{3}_{4}_{5}_{6}".format(bgroup,oname,city,state,date,unit,pincode)
-addData="""curl -X POST 127.0.0.1/mine -H 'Content-Type: application/json' -d '{ "data"={0} }' """.format(data)
+
+curl = "curl -X POST 127.0.0.1:3001/mine -H 'Content-Type: application/json' -d '{\"data\":"
+data="""\"{0},{1}_{2},{3},{4},{5},{6},{7},{8},{9}\"""".format(donorNumber,bloodType,RhFactor,unit,dateDonated,orgName,orgNumber,orgState,orgCity,pincode)
+addData = curl + data + "}'"
+
 status=commands.getstatusoutput(addData)
 if status[0]==0:
 	#Successful added to the blockchain
-	print "Location: ./index.html"
+	print "Location: ./blood-status.py"
 	print ""
 else:
 	print "Error in adding Data "

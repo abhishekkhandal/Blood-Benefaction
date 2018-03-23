@@ -36,19 +36,19 @@ print """
     <div class="register-photo">
         <div class="form-container">
             <div class="image-holder" style="background-image:url(&quot;assets/img/bloodbottle-01.jpg&quot;);margin:0px;"></div>
-            <form method="post">
+            <form method="post" action="form.py" >
                 <h2 class="text-center"><strong>DONATION INFORMATION</strong></h2>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
-                            <tr> <div class="form-group"><input class="form-control" type="text" name="number" required="" placeholder="Donor Contact Number" inputmode="numeric"></div></tr>
+                            <tr> <div class="form-group"><input class="form-control" type="text" name="donor-number" required="" placeholder="Donor Contact Number" inputmode="numeric"></div></tr>
                         </thead>
                         <tbody>
                             <tr></tr>
                             <tr>
                                 <td>
                                     <div class="form-group" style="width:100%">
-                                    <select class="form-control">
+                                    <select class="form-control" name="blood-type">
                                         <option>A</option>
                                         <option>B</option>
                                         <option>AB</option>
@@ -59,7 +59,7 @@ print """
                                 </td>
                                 <td>
                                     <div class="form-group">
-                                    <select class="form-control">
+                                    <select class="form-control" name="rh-factor">  
                                         <option>POSITIVE</option>
                                         <option>NEGETIVE</option>
                                     </select>
@@ -71,19 +71,19 @@ print """
                                         Unit:
                                     </div>
                                 </td>
-                                <td><input type="number" placeholder="unit" class="form-control" min="0.1" step="0.1" value="1" max="1" name="unitNum" style="padding:0px;"/></td>
+                                <td><input type="number" placeholder="unit" class="form-control" min="0.1" step="0.1" value="1" max="1" name="unit-amount" style="padding:0px;"/></td>
                             </tr>
                             <tr>
                                 <td>Donation Date:</td>
-                                <td><input class="form-control" type="date" required=""></td>
+                                <td><input class="form-control" type="date" name="dateDonated" required=""></td>
                             </tr>
                             <tr></tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="form-group"><input class="form-control" type="text" name="dname" required="" placeholder="Donor Organisation/Hospital/NGO"><input class="form-control" type="text" name="number" required="" placeholder="Contact Number" inputmode="numeric"></div>
+                <div class="form-group"><input class="form-control" type="text" name="org-name" required="" placeholder="Donor Organisation/Hospital/NGO"><input class="form-control" type="text" name="org-number" required="" placeholder="Contact Number" inputmode="numeric"></div>
                 <div
-                    class="form-group"><input class="form-control" type="text" name="State" placeholder="State (eg. Rajasthan)"><input class="form-control" type="text" name="city" required="" placeholder="City (eg. Jaipur)"><input class="form-control" type="text" name="zipcode"
+                    class="form-group"><input class="form-control" type="text" name="org-state" placeholder="State (eg. Rajasthan)"><input class="form-control" type="text" name="org-city" required="" placeholder="City (eg. Jaipur)"><input class="form-control" type="text" name="pincode"
                         placeholder="Zipcode (eg. 302004)"></div>
         <div class="form-group">
             <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox" required=""><strong>I confirm that the information given in this form is true, complete and accurate.</strong></label></div>
