@@ -83,7 +83,7 @@ print """
                 </div>
                 <div class="form-group"><input class="form-control" type="text" name="org-name" required="" placeholder="Donor Organisation/Hospital/NGO"><input class="form-control" type="text" name="org-number" required="" placeholder="Contact Number" inputmode="numeric"></div>
                 <div
-                    class="form-group"><input class="form-control" type="text" name="org-state" placeholder="State (eg. Rajasthan)"><input class="form-control" type="text" name="org-city" required="" placeholder="City (eg. Jaipur)"><input class="form-control" type="text" name="pincode"
+                    class="form-group"><input class="form-control" type="text" name="org-city" required="" placeholder="City (eg. Jaipur)"><input class="form-control" type="text" name="org-state" placeholder="State (eg. Rajasthan)"><input class="form-control" type="text" name="pincode"
                         placeholder="Zipcode (eg. 302004)"></div>
         <div class="form-group">
             <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox" required=""><strong>I confirm that the information given in this form is true, complete and accurate.</strong></label></div>

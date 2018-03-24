@@ -16,7 +16,7 @@ orgCity=cgi.FormContent()['org-city'][0]
 pincode=cgi.FormContent()['pincode'][0]
 
 curl = "curl -X POST 127.0.0.1:3001/mine -H 'Content-Type: application/json' -d '{\"data\":"
-data="""\"{0},{1}_{2},{3},{4},{5},{6},{7},{8},{9}\"""".format(donorNumber,bloodType,RhFactor,unit,dateDonated,orgName,orgNumber,orgState,orgCity,pincode)
+data="""\"{0},{1}_{2},{3},{4},{5},{6},{7},{8},{9}\"""".format(donorNumber,bloodType,RhFactor,unit,dateDonated,orgName,orgNumber,orgCity,orgState,pincode)
 addData = curl + data + "}'"
 
 status=commands.getstatusoutput(addData)
