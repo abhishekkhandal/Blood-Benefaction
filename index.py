@@ -16,11 +16,18 @@ print  """
     <link rel="stylesheet" href="assets/css/Features-Boxed.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        #image_div{
+          background-image:url("assets/img/52148-O72TBI-02.png");
+          width:100%;
+          height:600px;
+          background-repeat:no-repeat;
+          background-size:cover;
+    </style>
 </head>
 <body>
-    <div></div>
-    <div>
-        <div class="header-dark" style="background-image:url(&quot;assets/img/52148-O72TBI-02.png&quot;);height:800px;padding:0px;"></div>
+    <div id="image_div">
+        <div class="header-dark"></div>
     </div>
     <div class="features-boxed">
         <div class="container">

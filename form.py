@@ -2,6 +2,8 @@
 
 import cgi
 import commands
+import cgitb
+cgitb.enable()
 
 donorNumber=cgi.FormContent()['donor-number'][0]
 bloodType=cgi.FormContent()['blood-type'][0]
@@ -21,7 +23,6 @@ addData = curl + data + "}'"
 
 status=commands.getstatusoutput(addData)
 if status[0]==0:
-	#Successful added to the blockchain
 	print "Location: ./blood-status.py"
 	print ""
 else:

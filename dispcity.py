@@ -3,6 +3,8 @@
 import cgi 
 import commands
 import os
+import cgitb
+cgitb.enable()
 
 bgroup=cgi.FormContent()['bg'][0]
 city=[]
